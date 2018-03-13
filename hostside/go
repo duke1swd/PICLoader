@@ -1,0 +1,8 @@
+#!/bin/sh
+FILE=data
+
+echo Loading $FILE
+
+./hexcrack < $FILE.hex | ./loader -v -p 10
+./hexcrack < $FILE.hex | ./loader -v -p 10 -V
+./loader -p 10 -C
